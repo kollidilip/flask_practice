@@ -4,7 +4,7 @@ app = Flask(__name__)
 import urllib
 
 #data base connection
-params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=OM-PC\SQLEXPRESS;DATABASE=AdventureWorks2014;Trusted_Connection=yes")
+params = urllib.parse.quote_plus("DRIVER={ODBC Driver 11 for SQL Server};SERVER=OM-PC;DATABASE=DebtTracker;Trusted_Connection=yes")
 app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
 app.config['SECRET_KEY'] = 'my secret key'
 
