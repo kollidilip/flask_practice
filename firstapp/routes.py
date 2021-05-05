@@ -22,3 +22,8 @@ def adduser_page():
         return render_template('success.html', userdetails=user_to_add)
     return render_template('adduser.html', form=form)
 
+@app.route('/viewuser',methods=['GET','POST'])
+def viewuser_page():
+    user = User.query.all()
+    return render_template('viewuser.html', user=user)
+

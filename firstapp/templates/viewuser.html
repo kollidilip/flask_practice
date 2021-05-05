@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope='col'>id</th>
+            <th scope='col'>name</th>
+            <th scope='col'>address</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in user %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.address}}</td>               
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
